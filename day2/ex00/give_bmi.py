@@ -1,6 +1,8 @@
 import numpy as np
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     """
     Calculate the Body Mass Index (BMI) for given heights and weights.
 
@@ -20,14 +22,13 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
     """
 
     height = np.array(height)
-    weight = np.array(weight)    
-        
+    weight = np.array(weight)
+
     assert height.shape == weight.shape, "Assertion Error: Mismatched Sizes"
-    
-    bmi = weight/height**2
+
+    bmi = weight / height**2
 
     return bmi.tolist()
-
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:

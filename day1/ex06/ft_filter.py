@@ -7,6 +7,6 @@ def ft_filter(func: function, itera):
     is true. If function is None, return the items that are true.
     """
     if func is None:
-        func = lambda x: x
+        def func(x): return x
 
-    return iter([x for x in itera if func(x)])  
+    return iter([x for x in itera if func(x)])

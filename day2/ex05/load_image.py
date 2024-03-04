@@ -2,7 +2,8 @@ from PIL import Image
 from PIL import UnidentifiedImageError
 import numpy as np
 
-def ft_load(path: str) -> np.array: 
+
+def ft_load(path: str) -> np.array:
     try:
         img = Image.open(path)
         img_array = np.array(img)

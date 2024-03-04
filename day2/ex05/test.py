@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 from load_image import ft_load
 
+
 def main():
     img = ft_load("landscape.jpg")
     if img is None:
@@ -18,5 +19,6 @@ def main():
     realimg = Image.fromarray(ft_grey(img))
     realimg.show()
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     main()
